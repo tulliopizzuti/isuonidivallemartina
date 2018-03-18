@@ -379,7 +379,7 @@ address { line-height: 2; }
 @media (min-width: 1400px) {
 	.container-fluid { max-width: 1605px; }
 	.tm-sidebar { width: 360px; }
-	.media-body { height: 348px; }
+	/*.media-body { height: 348px; }*/
 	.tm-main-content { margin-left: 415px; }
 	.tm-section-title { margin-bottom: 30px; }
 }
@@ -402,4 +402,29 @@ address { line-height: 2; }
 }
 .bottom-border{
 	margin-bottom: 10px;
+}
+.img-list-container img {
+	width:  150px;
+	height: 150px;
+	display: inline;
+	padding:10px;
+	border: 2px rgb(108,70,117) solid;
+	border-radius: 5px;
+	cursor: pointer;
+	margin:5px;
+	
+	/*transform: rotate(90deg);*/
+}
+.img-list-container img:hover {
+	padding:0px;
+	cursor: pointer;
+}
+.img-list-container  {
+	margin-bottom: 5px;
+}
+.img-rotate{
+	transform: rotate(90deg);
+}
+.margin-small{
+	margin-bottom: 20px;
 }
