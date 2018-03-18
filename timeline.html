@@ -135,7 +135,9 @@ http://www.tooplate.com/view/2094-mason
     
         $(document).ready(function(){
             // Update the current year in copyright
-            $('.tm-current-year').text(new Date().getFullYear());   
+            $('.tm-current-year').text(new Date().getFullYear()); 
+			var w=$(window).width();
+			var h=$(window).height();
 			$('.venobox').venobox({
 				 infinigall:true
 			});
