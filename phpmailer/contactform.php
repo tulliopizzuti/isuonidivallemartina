@@ -1,7 +1,7 @@
 <?php
-require "htdocs/isuonidivallemartina/phpmailer/PHPMailer.php";
-require "htdocs/isuonidivallemartina/phpmailer/Exception.php";
-require "htdocs/isuonidivallemartina/phpmailer/SMTP.php";
+require "PHPMailer.php";
+require "Exception.php";
+require "SMTP.php";
 
 
 $email=$_POST['contact_email'];
@@ -24,19 +24,24 @@ $mail = new PHPMailer\PHPMailer\PHPMailer(true);
     $mail->Port = 25;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('tullio.pizz@gmail.com', 'Mailer');
-    $mail->addAddress('tullio.pizz@outlook.it', 'Joe User');     // Add a recipient
-
+    $mail->setFrom('tullio.pizz@gmail.com', 'I suoni di valle Martina');
+    $mail->addAddress('tullio.pizz@outlook.it', 'I suoni di valle Martina');     // Add a recipient
+	$mail->AddCC("tullio.pizz@gmail.com");
 
 
  
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-echo 'Message pre sent';
-    $mail->send();
+    $mail->Subject = "prenotazione ".$email;
+    $mail->Body    = 
+		'<p>Email: '.$email.'</p>'.
+		'<p>Numero:  '.$number.'</p>'.
+		'<p>Nome,Cognome:  '.$name.'</p>'.
+		'<p>Data check in: '.$date_check_in.'</p>'.
+		'<p>Data check out: '.$date_check_out.'</p>'.
+		'<p>Messaggio:  '.$message.'</p>';
+	echo 'Message pre sent';
+    //$mail->send();
     echo 'Message has been sent';
 try {
     
