@@ -6,7 +6,7 @@
 <file name="320x320_3.jpg" server="localhost" local="131658588254646087" remote="131658588000000000" Dst="1" />
 <file name="320x320_1.jpg" server="localhost" local="131658577496154095" remote="131658588000000000" Dst="1" />
 <file name="320x320_2.jpg" server="localhost" local="131658579758577965" remote="131658588000000000" Dst="1" />
-<file name="480x320_1.jpg" server="localhost" local="131658582472148185" remote="131658588000000000" Dst="1" />
+<file name="480x320_1.jpg" server="localhost" local="131659288411516876" remote="131660236800000000" Dst="1" />
 <file name="480x320_2.jpg" server="localhost" local="131658584410178672" remote="131658588000000000" Dst="1" />
 <file name="540x304_2.jpg" server="localhost" local="131658571024001471" remote="131658588000000000" Dst="1" />
 <file name="320x320_4.jpg" server="localhost" local="131658592285971350" remote="131658596400000000" Dst="1" />
@@ -24,7 +24,7 @@
 <file name="374x510_3.jpg" server="localhost" local="131658616464965664" remote="131658616800000000" Dst="1" />
 <file name="320x320_8.jpg" server="localhost" local="131658623219232852" remote="131658623400000000" Dst="1" />
 <file name="320x320_7.jpg" server="localhost" local="131658622604296286" remote="131658623400000000" Dst="1" />
-<file name="480x320_4.jpg" server="localhost" local="131658622040057616" remote="131658623400000000" Dst="1" />
+<file name="480x320_4.jpg" server="localhost" local="131659288411829419" remote="131660236800000000" Dst="1" />
 <file name="camera_lavanda_4.jpg" server="localhost/isuonidivallemartina/" local="131658839172780594" remote="131658838800000000" Dst="1" />
 <file name="camera_lavanda_3.jpg" server="localhost/isuonidivallemartina/" local="131658839020635539" remote="131658838800000000" Dst="1" />
 <file name="camera_lavanda_2.jpg" server="localhost/isuonidivallemartina/" local="131658837214593809" remote="131658837000000000" Dst="1" />
@@ -66,4 +66,20 @@
 <file name="lavanda_bagni_2.jpg" server="localhost/isuonidivallemartina/" local="131445038480000000" remote="131658855600000000" Dst="1" />
 <file name="pozzo.JPG" server="localhost/isuonidivallemartina/" local="131658847070000000" remote="131658855600000000" Dst="1" />
 <file name="entrata.jpg" server="localhost/isuonidivallemartina/" local="131658860605170493" remote="131658860400000000" Dst="1" />
+<file name="camera_ciclamino_1.jpg" server="localhost" local="131659288411985662" remote="131660236800000000" Dst="1" />
+<file name="camera_ciclamino_2.jpg" server="localhost" local="131659288412141943" remote="131660236800000000" Dst="1" />
+<file name="camera_ciclamino_3.jpg" server="localhost" local="131659288412298198" remote="131660236800000000" Dst="1" />
+<file name="camera_lavanda_2.jpg" server="localhost" local="131659288412454478" remote="131660236800000000" Dst="1" />
+<file name="camera_lavanda_3.jpg" server="localhost" local="131659288412611001" remote="131660236800000000" Dst="1" />
+<file name="camera_lavanda_4.jpg" server="localhost" local="131659288412611001" remote="131660236800000000" Dst="1" />
+<file name="ciclamino_bagni_1.jpg" server="localhost" local="131659288412611001" remote="131660236800000000" Dst="1" />
+<file name="ciclamino_bagni_2.jpg" server="localhost" local="131659288412784979" remote="131660236800000000" Dst="1" />
+<file name="colazione_1.jpg" server="localhost" local="131659288412815057" remote="131660236800000000" Dst="1" />
+<file name="colazione_2.jpg" server="localhost" local="131659288412845124" remote="131660236800000000" Dst="1" />
+<file name="gazebo.JPG" server="localhost" local="131659288413005574" remote="131660236800000000" Dst="1" />
+<file name="colazione_3.jpg" server="localhost" local="131659288412875278" remote="131660236800000000" Dst="1" />
+<file name="lavanda_bagni_1.jpg" server="localhost" local="131659288413045676" remote="131660236800000000" Dst="1" />
+<file name="entrata.jpg" server="localhost" local="131659288412995541" remote="131660236800000000" Dst="1" />
+<file name="lavanda_bagni_2.jpg" server="localhost" local="131659288413075751" remote="131660236800000000" Dst="1" />
+<file name="pozzo.JPG" server="localhost" local="131659288413105814" remote="131660236800000000" Dst="1" />
 </dwsync>

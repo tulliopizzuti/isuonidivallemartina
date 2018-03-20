@@ -6,10 +6,11 @@
 <file name="logo.jpg" server="localhost/isuonidivallemartina/" local="131657962045642995" remote="131658011400000000" Dst="1" />
 <file name="timeline.html" server="localhost/isuonidivallemartina/" local="131658884002468203" remote="131658895800000000" Dst="1" />
 <file name=".gitattributes" server="localhost" local="131658393259700744" remote="131658395400000000" Dst="1" />
-<file name="about.html" server="localhost" local="131658658812457790" remote="131658658800000000" Dst="1" />
-<file name="contact.html" server="localhost" local="131658652015905035" remote="131658652800000000" Dst="1" />
-<file name="index.html" server="localhost" local="131658652398104343" remote="131658652800000000" Dst="1" />
+<file name="about.html" server="localhost" local="131659288411204341" remote="131660236800000000" Dst="1" />
+<file name="contact.html" server="localhost" local="131660418010000000" remote="131660418000000000" Dst="1" />
+<file name="index.html" server="localhost" local="131659288413165985" remote="131660236800000000" Dst="1" />
 <file name="logo.jpg" server="localhost" local="131658393267023563" remote="131658395400000000" Dst="1" />
-<file name="timeline.html" server="localhost" local="131658652363401873" remote="131658652800000000" Dst="1" />
+<file name="timeline.html" server="localhost" local="131659288413266244" remote="131660236800000000" Dst="1" />
 <file name=".gitattributes" server="localhost/isuonidivallemartina/" local="131658391465185287" remote="131658807000000000" Dst="1" />
+<file name="contactform.php" server="localhost" local="131660458395184819" remote="131660458200000000" Dst="1" />
 </dwsync>
