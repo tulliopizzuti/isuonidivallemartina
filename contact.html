@@ -5,18 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Prenota</title>
-<!--
 
-Template 2094 Mason
-
-http://www.tooplate.com/view/2094-mason
-
--->
-<!-- load stylesheets -->
+	
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400">   <!-- Google web font "Open Sans", https://fonts.google.com/ -->
 <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">           <!-- Font Awesome, http://fontawesome.io/ -->
 <link rel="stylesheet" href="css/bootstrap.min.css">                                 <!-- Bootstrap style, http://v4-alpha.getbootstrap.com/ -->
 <link rel="stylesheet" href="css/tooplate-style.css">                              <!-- Templatemo style -->
+
+
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,18 +51,34 @@ http://www.tooplate.com/view/2094-mason
                 <section id="contact" class="tm-content-box">
                     <div class="row margin-b-50">
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <h2 class="tm-section-title tm-violet-text">Contact Us</h2>
-                            <form action="phpmailer/contactform.php" method="post" class="contact-form">
+                          <h2 class="tm-section-title tm-violet-text">Prenota </h2>
+							
+                         <div id="progress" style="display: none;" >
+                         <div class="loader" >
+								
+							</div>
+								<p class="h5 text-violet" style="text-align: center;margin: 5px;">Attendi...</p> 
+							</div>
+                          <form id="contact_form" class="contact-form" >
                                 <div class="form-group">
                                     <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Nome e cognome"  required/>
                                 </div>
 								<div class="form-group">
 									<label for="contact_check_in">Check-in</label> 
-                                    <input type="date" id="contact_check_in" name="contact_check_in" class="form-control" placeholder="Check-in"  required/>
+                                    <input type="date" id="contact_check_in" name="contact_check_in" class="form-control" placeholder="Check-in"  required
+                                    />
                                 </div>
 								<div class="form-group">
 									<label for="contact_check_out">Check-out</label> 
                                     <input type="date" id="contact_check_out" name="contact_check_out" class="form-control" placeholder="Check-out"  required/>
+                                </div>
+                                <div class="form-group">
+									<label for="contact_room" >Stanza</label> 
+                                   <select class="form-control" id="contact_room" name="contact_room" required>
+                                   		<option value="Stanza_Ciclamino" selected>Stanza Ciclamino</option>
+                                   		<option value="Stanza_Lavanda" >Stanza Lavanda</option>
+                                   </select>
+                                    
                                 </div>
 								<div class="form-group">
                                     <input type="text" id="contact_number" name="contact_number" class="form-control" placeholder="Numero di telefono" maxlength="10"  minlength="10" required/>
@@ -77,19 +89,22 @@ http://www.tooplate.com/view/2094-mason
                                 <div class="form-group">
                                     <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="Messagio" required></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary tm-button-rounded tm-button-violet tm-button-no-border tm-button-normal">Send</button>
+                                <div class="alert-danger" id="error_container_form">
+                                	<p class="text-danger" id="error_text_form" style="margin-bottom: 10px"></p>
+                                </div>
+                                <button type="button" id="btn_submit" class="btn btn-primary tm-button-rounded tm-button-violet tm-button-no-border tm-button-normal">Send</button>
                             </form>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="tm-address-box">
-                                <p>Morbi auctor euismod dictum. Morbi eu nibh in nulla interdum placerat. Donec pellentesque est at sem aliquam hendrerit.</p>                                    
+                                <p>Compila il form per richiedere una prenotazione, verrai ricontattato telefonicamente o via e-mail per la conferma.
+                                Puoi utilizzare i nostri contatti telefonici o e-mail per ulteriori informazioni. </p>
                                 <address>
-                                    <span class="tm-violet-text">Mailing Address</span><br>
-                                    991 Curabitur molestie dui vel,<br>
-                                    metus iaculis suscipit 11900<br><br>
-                                    Email: <a class="tm-blue-text" href="mailto:info@company.com">info@company.com</a><br>
-                                    Tel: <a class="tm-black-text" href="tel:010-020-0120">010-020-0120</a><br>
-                                    Fax: <a class="tm-black-text" href="tel:090-080-0980">090-080-0980</a><br>
+                                <span class="tm-violet-text">Indirizzo</span><br>
+                                Via Iscutieri, 84060, Poderia, SA, Italia<br>
+                                <br>
+Email: <a class="tm-blue-text" href="mailto:isuonidivallemartina@gmail.com">isuonidivallemartina@gmail.com</a><br>
+Tel: <a class="tm-black-text" href="tel:+393743467148">+39 3743467148</a><br>
                                 </address>
                             </div>
                         </div>
@@ -103,15 +118,12 @@ http://www.tooplate.com/view/2094-mason
             </div>
         </div> 
 
-        <footer class="tm-footer text-right">
-            <p>Copyright &copy; <span class="tm-current-year">2018</span> Your Company  
-            
-            - Design: <a href="http://www.tooplate.com" target="_parent">Tooplate</a></p>
-        </footer>            
+       
     </div> <!-- container-fluid -->
 
     <!-- load JS files -->
-    <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+    <script src="js/jquery-1.11.3.min.js"></script>   
+    <script src="js/bootstrap.min.js"></script>          <!-- jQuery (https://jquery.com/download/) -->
     <script>  
 
         /* Google map
@@ -122,7 +134,7 @@ http://www.tooplate.com/view/2094-mason
         function initialize() {
             var mapOptions = {
                 zoom: 16,
-                center: new google.maps.LatLng(37.769725, -122.462154),
+                center: new google.maps.LatLng(40.089461, 15.368439),
                 scrollwheel: false
             };
 
@@ -144,18 +156,71 @@ http://www.tooplate.com/view/2094-mason
         function loadGoogleMap(){
             var script = document.createElement('script');
             script.type = 'text/javascript';
-            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVWt4rJfibfsEDvcuaChUaZRS5NXey1Cs&v=3.exp&sensor=false&' + 'callback=initialize';
+            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB_Yf6CElzNmBNcwE9pbbVc4xj6TbEGzcg&' + 'callback=initialize';
             document.body.appendChild(script);
         } 
 
-        $(document).ready(function(){           
-
+        $(document).ready(function(){     
             // Google Map
             loadGoogleMap();    
-
-            // Update the current year in copyright
-            $('.tm-current-year').text(new Date().getFullYear());        
+			var tomorrow = new Date();
+				tomorrow.setDate(new Date().getDate()+1);
+			$('#contact_check_in').attr({'min':''+tomorrow.toISOString().slice(0,10)});	
+			$('#contact_check_out').attr({'min':''+tomorrow.toISOString().slice(0,10)});	
         });
+		$('#contact_check_in').change(function(){
+			
+			$('#contact_check_out').val('');
+			$('#contact_check_out').attr({'min':''+$('#contact_check_in').val()});
+		});
+		$('#contact_number').click(function(){
+			$('#error_text_form').val('');
+				$('#error_container_form').hide('fast');
+		});
+		
+		$('#btn_submit').click(function(){
+			var email=$('#contact_email').val();
+			var number=$('#contact_number').val();
+			var room=$('#contact_room').val();
+			var name=$('#contact_name').val();
+			var check_in=$('#contact_check_in').val();
+			var check_out=$('#contact_check_out').val();
+			var message=$('#contact_message').val();
+			if(isNaN(number)){
+				var errorMessage="Inserisci un numero di telefono corretto per continuare."
+				$('#error_text_form').text(errorMessage);
+				$('#error_container_form').show('slow');
+				
+			}
+			else{
+				$('#contact_form').hide();
+				$('#progress').show();
+				$.ajax({
+					url:'phpmailer/contactform.php',
+					method:'POST',
+					data:{'contact_email':email,'contact_name':name,
+						  'contact_number':number,'contact_message':message,
+						  'contact_check_out':check_out,'contact_check_in':check_in,
+						  'contact_room':room
+						
+					},
+					success:function(result){
+						if(result=='true'){
+							
+						}
+						else{
+							
+						}
+					},
+					error:function(xhr,status,error){
+						
+					}
+				});
+			}
+		});
+		
+
+
     </script>
 </body>
 </html>

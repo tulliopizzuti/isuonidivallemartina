@@ -10,11 +10,12 @@ $number=$_POST['contact_number'];
 $message=$_POST['contact_message'];
 $date_check_out=$_POST['contact_check_out'];
 $date_check_in=$_POST['contact_check_in'];
+$room=$_POST['contact_room'];
 
 
 $mail = new PHPMailer\PHPMailer\PHPMailer(true); 
 //Server settings
-    $mail->SMTPDebug = 5;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -25,7 +26,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer(true);
 
     //Recipients
     $mail->setFrom('tullio.pizz@gmail.com', 'I suoni di valle Martina');
-    $mail->addAddress('tullio.pizz@outlook.it', 'I suoni di valle Martina');     // Add a recipient
+    $mail->addAddress('isuonidivallemartina@gmail.com', 'I suoni di valle Martina');     // Add a recipient
 	$mail->AddCC("tullio.pizz@gmail.com");
 
 
@@ -39,14 +40,16 @@ $mail = new PHPMailer\PHPMailer\PHPMailer(true);
 		'<p>Nome,Cognome:  '.$name.'</p>'.
 		'<p>Data check in: '.$date_check_in.'</p>'.
 		'<p>Data check out: '.$date_check_out.'</p>'.
+		'<p>Stanza: '.$room.'</p>'.
 		'<p>Messaggio:  '.$message.'</p>';
-	echo 'Message pre sent';
-    //$mail->send();
-    echo 'Message has been sent';
+	
+    $mail->send();
+    echo 'true';
 try {
     
 } catch (Exception $e) {
-    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+	error_log('PHPMAILER EXCEPTION: '.$mail->ErrorInfo);
+    echo 'false';
 }
 
 ?>
