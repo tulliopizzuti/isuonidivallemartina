@@ -6,4 +6,7 @@
 <file name="bootstrap.min.css" server="localhost" local="131658393260169537" remote="131663095800000000" Dst="1" />
 <file name="venobox.css" server="localhost/isuonidivallemartina/" local="131658628510000000" remote="131658807000000000" Dst="1" />
 <file name="venobox.css" server="localhost" local="131659288411360606" remote="131662823400000000" Dst="1" />
+<file name="jquery-ui.min.css" server="localhost/isuonidivallemartina/" local="131663568840000000" remote="131663608200000000" Dst="1" />
+<file name="jquery-ui.structure.min.css" server="localhost/isuonidivallemartina/" local="131663568840000000" remote="131663608200000000" Dst="1" />
+<file name="jquery-ui.theme.min.css" server="localhost/isuonidivallemartina/" local="131663568840000000" remote="131663608200000000" Dst="1" />
 </dwsync>

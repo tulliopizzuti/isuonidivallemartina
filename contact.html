@@ -12,6 +12,10 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <!-- Bootstrap style, http://v4-alpha.getbootstrap.com/ -->
 <link rel="stylesheet" href="css/tooplate-style.css">
+	
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
 <!-- Templatemo style -->
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -57,12 +61,12 @@
               </div>
               <div class="form-group">
                 <label for="contact_check_in">Check-in</label>
-                <input type="date" id="contact_check_in" name="contact_check_in" class="form-control" placeholder="Check-in"  required
+                <input type="text" id="contact_check_in" name="contact_check_in" onkeydown="return false" class="form-control" placeholder="Check-in"  required
                                     />
               </div>
               <div class="form-group">
                 <label for="contact_check_out">Check-out</label>
-                <input type="date" id="contact_check_out" name="contact_check_out" class="form-control" placeholder="Check-out"  required/>
+                <input type="text" id="contact_check_out" name="contact_check_out" onkeydown="return false" class="form-control" placeholder="Check-out"  required/>
               </div>
               <div class="form-group">
                 <label for="contact_room" >Stanza</label>
@@ -114,7 +118,7 @@
 <!-- load JS files --> 
 <script src="js/jquery-1.11.3.min.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
-	<script src="js/jquery.validate.min.js"></script> 
+	<script src="js/jquery-ui.min.js"></script> 
 <script>  
 
         /* Google map
@@ -150,110 +154,68 @@
             script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB_Yf6CElzNmBNcwE9pbbVc4xj6TbEGzcg&' + 'callback=initialize';
             document.body.appendChild(script);
         } 
-
+$( function() {
+	var tomorrow = new Date();
+	tomorrow.setDate(new Date().getDate()+1);
+    var dateFormat_ = "dd-mm-yy",
+      from = $( "#contact_check_in" )
+        .datepicker({
+         defaultDate: "+1w",
+			 minDate: +1,
+          changeMonth: true,
+          numberOfMonths: 1,
+			dateFormat:dateFormat_
+        })
+        .on( "change", function() {
+          to.datepicker( "option", "minDate", getDate( this ) );
+        }),
+      to = $( "#contact_check_out" ).datepicker({
+        defaultDate: "+1w",
+        changeMonth: true,
+		  minDate: +1,
+        numberOfMonths: 1,
+		  dateFormat:dateFormat_
+      })
+      .on( "change", function() {
+        from.datepicker( "option", "maxDate", getDate( this ) );
+      });
+ 
+    function getDate( element ) {
+      var date;
+      try {
+        date = $.datepicker.parseDate(dateFormat_, element.value );
+      } catch( error ) {
+        date = null;
+		  
+      }
+ 
+      return date;
+    }
+  } );
         $(document).ready(function(){     
-            // Google Map
+            
+	
+			
+			
+			
+			
+			
             loadGoogleMap();    
 			var tomorrow = new Date();
 				tomorrow.setDate(new Date().getDate()+1);
-			$('#contact_check_in').attr({'min':''+tomorrow.toISOString().slice(0,10)});	
-			$('#contact_check_out').attr({'min':''+tomorrow.toISOString().slice(0,10)});	
+			/*$('#contact_check_in').attr({'min':''+tomorrow.toISOString().slice(0,10)});	
+			$('#contact_check_out').attr({'min':''+tomorrow.toISOString().slice(0,10)});*/	
         });
-		$('#contact_check_in').change(function(){
+		/*$('#contact_check_in').change(function(){
 			
 			$('#contact_check_out').val('');
 			$('#contact_check_out').attr({'min':''+$('#contact_check_in').val()});
-		});
+		});*/
 		$('#contact_number').click(function(){
 			$('#error_text_form').val('');
 				$('#error_container_form').hide('fast');
 		});
-	/*	$('#btn_submit').click(function(){
-			
-				
-			
-				
-				
-				
-				
-				
-				
-				
-				
-			
-			var email=$('#contact_email').val();
-			var number=$('#contact_number').val();
-			var room=$('#contact_room').val();
-			var name=$('#contact_name').val();
-			var check_in=$('#contact_check_in').val();
-			var check_out=$('#contact_check_out').val();
-			var message=$('#contact_message').val();
-			
-			if(isNaN(number)){
-				var errorMessage="Inserisci un numero di telefono corretto per continuare.";
-				$('#error_text_form').text(errorMessage);
-				$('#error_container_form').show('slow');
-				
-			}
-			else{
-				$('#contact_form').hide();
-				$('#progress').show();
-				$.ajax({
-					url:'phpmailer/contactform.php',
-					method:'POST',
-					data:{'contact_email':email,'contact_name':name,
-						  'contact_number':number,'contact_message':message,
-						  'contact_check_out':check_out,'contact_check_in':check_in,
-						  'contact_room':room
-						
-					},
-					success:function(result){
-						$('#progress').hide();
-						
-						if(result=='true'){
-							$('#result').addClass('alert-success');
-			$('#result').children('p').addClass('text-success');
-			$('#result').children('p').text("Procedura completata, verrai contattato a breve");
-			$('#result').show();
-						}
-						else{
-							$('#result').addClass('alert-danger');
-			$('#result').children('p').addClass('text-danger');
-			$('#result').children('p').text("Abbiamo riscontrato un errore, si prega di utilizzare i contattici telefoni per continuare.");
-			$('#result').show();
-						}
-					},
-					error:function(xhr,status,error){
-						$('#progress').hide();
-						$('#result').addClass('alert-danger');
-			$('#result').children('p').addClass('text-danger');
-			$('#result').children('p').text("Abbiamo riscontrato un errore, si prega di utilizzare i contattici telefoni per continuare.");
-			$('#result').show();
-					}
-				});
-			}
-			
-		});
-		
-			
-			jQuery.extend(jQuery.validator.messages, {
-    required: "Devi inserire il campo per continuare.",
-    remote: "Aggiusta questo campo.",
-    email: "Inserisci un indirizzo email valido.",
-    url: "Inserisci un URL valido.",
-    date: "Inserisci una data valida.",
-    dateISO: "Inserisci una data valida (ISO).",
-    number: "Inserisci un numero valido.",
-    maxlength: jQuery.validator.format("Non inserire più di {0} caratteri."),
-    minlength: jQuery.validator.format("Inserisci almeno {0} caratteri."),
-    rangelength: jQuery.validator.format("Inserisci un valore di lunghezza compresa fra {0} e {1}."),
-    range: jQuery.validator.format("Inserisci un valore compreso tra {0} and {1}."),
-    max: jQuery.validator.format("Inserisci un valore minore o uguale a {0}."),
-    min: jQuery.validator.format("Inserisci un valore maggiore o uguale a {0}.")
-});
-
-*/
-    
+	
     
     
     function checkSubmit(){
