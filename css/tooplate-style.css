@@ -243,7 +243,7 @@ body {
 }
 
 /* fluid 5 columns */
-.grid-item { margin: 5px; }
+.grid-item { margin: 5px;}
 
 /* Firefox hack 
    https://css-tricks.com/snippets/css/css-hacks-targeting-firefox/
@@ -453,4 +453,5 @@ address { line-height: 2; }
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
 
