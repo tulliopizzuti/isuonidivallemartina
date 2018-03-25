@@ -5,10 +5,12 @@
 <file name="masonry.pkgd.min.js" server="localhost/isuonidivallemartina/" local="131500364980000000" remote="131664064800000000" Dst="1" />
 <file name="imagesloaded.pkgd.min.js" server="localhost" local="131658393266711036" remote="131662823400000000" Dst="1" />
 <file name="masonry.pkgd.min.js" server="localhost" local="131658393267023563" remote="131662823400000000" Dst="1" />
-<file name="jquery-1.11.3.min.js" server="localhost" local="131663089588373953" remote="131663089200000000" Dst="1" />
+<file name="jquery-1.11.3.min.js" server="localhost" local="131663126539091798" remote="131664661800000000" Dst="2" />
 <file name="venobox.min.js" server="localhost/isuonidivallemartina/" local="131658628510000000" remote="131664064800000000" Dst="1" />
 <file name="venobox.min.js" server="localhost" local="131659288413226213" remote="131662823400000000" Dst="1" />
-<file name="bootstrap.min.js" server="localhost" local="131139284100000000" remote="131663076600000000" Dst="1" />
+<file name="bootstrap.min.js" server="localhost" local="131607668160000000" remote="131664661800000000" Dst="2" />
 <file name="bootstrap.min.js" server="localhost/isuonidivallemartina/" local="131607668160000000" remote="131664064800000000" Dst="1" />
 <file name="jquery-ui.min.js" server="localhost/isuonidivallemartina/" local="131663568840000000" remote="131664064800000000" Dst="1" />
+<file name="jquery.scrollTo.min.js" server="localhost/isuonidivallemartina/" local="131514288630000000" remote="131664639600000000" Dst="2" />
+<file name="jquery.scrollTo.min.js" server="localhost" local="131514288630000000" remote="131664661800000000" Dst="2" />
 </dwsync>

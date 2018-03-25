@@ -227,7 +227,7 @@ body {
 	font-size: 1.4rem;
 }
 
-.tm-gallery-container {	overflow-y: hidden; }
+.tm-gallery-container {	overflow: hidden; }
 
 .grid {
   max-width: 1165px;
@@ -453,34 +453,44 @@ address { line-height: 2; }
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-.carousel.slide{
-	margin-bottom: 10px;
-}
+
 .carousel.slide, .carousel.slide .carousel-inner .carousel-item img{
-	height: 680px;
+	height: 680px;margin: 0 auto;
+}.carousel.slide{
+	margin-bottom: 10px;
+	background-color:  rgba(65,61,61,0.10) ;
 }
+.carousel-indicators::-webkit-scrollbar { height: 0 !important }
 .carousel-indicators{
 	margin: 0px;
 	padding: 0px;
-	height: 70px;
+	height: 78px;
 	min-width: 100%;
-	border: #eeeeee solid ;
+	border: solid rgba(108,70,117) ;;
 	padding:2px;
+	
 	background-color: rgba(65,61,61,0.50) ;
-	
-	
+	justify-content: flex-start;
+	overflow-x: scroll ;
+	overflow-y: hidden;
+	-ms-overflow-style: none;
+	 overflow: -moz-scrollbars-none;
 }
 
 .carousel-indicators li{
-	opacity: 1;
-	z-index: 1000;
 	height: 60px;
 	width: 80px;
+}.carousel-indicators li.active img{
+	border: solid 4px rgb(108,70,117);
+	opacity:1;
+	
 }
 .carousel-indicators li img{
 	opacity: 1;
 	height: 60px;
 	width: 80px;
+	opacity: 0.55;
+	
 }
 @media only screen and (min-width:992px) and (max-width:1199px){
 	.carousel.slide, .carousel.slide .carousel-inner .carousel-item img{
