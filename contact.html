@@ -25,9 +25,9 @@
       </section>
       <nav class="tm-main-nav">
         <ul class="tm-main-nav-ul">
-          <li class="tm-nav-item"><a href="index.html" class="tm-nav-item-link tm-button">Galleria</a> </li>
-          <li class="tm-nav-item"><a href="timeline.html" class="tm-nav-item-link tm-button">Interni</a> </li>
-          <li class="tm-nav-item"><a href="about.html" class="tm-nav-item-link tm-button">Informazioni</a> </li>
+          <li class="tm-nav-item"><a href="gallery.html" class="tm-nav-item-link tm-button">Galleria</a> </li>
+          <li class="tm-nav-item"><a href="room.html" class="tm-nav-item-link tm-button">Interni</a> </li>
+          <li class="tm-nav-item"><a href="index.html" class="tm-nav-item-link tm-button">Informazioni</a> </li>
           <li class="tm-nav-item"><a href="contact.html" class="tm-nav-item-link tm-button active">Prenota</a> </li>
         </ul>
       </nav>
@@ -145,7 +145,7 @@ $( function() {
     var dateFormat_ = "dd-mm-yy",
       from = $( "#contact_check_in" )
         .datepicker({
-         defaultDate: "+1w",
+         defaultDate: "+1d",
 			 minDate: +1,
           changeMonth: true,
           numberOfMonths: 1,
@@ -155,7 +155,7 @@ $( function() {
           to.datepicker( "option", "minDate", getDate( this ) );
         }),
       to = $( "#contact_check_out" ).datepicker({
-        defaultDate: "+1w",
+        defaultDate: "+1d",
         changeMonth: true,
 		  minDate: +1,
         numberOfMonths: 1,

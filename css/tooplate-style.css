@@ -453,5 +453,55 @@ address { line-height: 2; }
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+.carousel.slide{
+	margin-bottom: 10px;
+}
+.carousel.slide, .carousel.slide .carousel-inner .carousel-item img{
+	height: 680px;
+}
+.carousel-indicators{
+	margin: 0px;
+	padding: 0px;
+	height: 70px;
+	min-width: 100%;
+	border: #eeeeee solid ;
+	padding:2px;
+	background-color: rgba(65,61,61,0.50) ;
+	
+	
+}
+
+.carousel-indicators li{
+	opacity: 1;
+	z-index: 1000;
+	height: 60px;
+	width: 80px;
+}
+.carousel-indicators li img{
+	opacity: 1;
+	height: 60px;
+	width: 80px;
+}
+@media only screen and (min-width:992px) and (max-width:1199px){
+	.carousel.slide, .carousel.slide .carousel-inner .carousel-item img{
+	height: 585px;
+}
+}
+@media only screen and (min-width:1200px) and (max-width:1399px){
+	.carousel.slide, .carousel.slide .carousel-inner .carousel-item img{
+	height: 664px;
+}
+}
+@media only screen and (max-width:425px){
+	.carousel.slide, .carousel.slide .carousel-inner .carousel-item img{
+	height: 250px;
+}
+}
+@media only screen and (min-width:426px) and (max-width:991px){
+	.carousel.slide, .carousel.slide .carousel-inner .carousel-item img{
+	height: 480px;
+}
+}
+
 
 
