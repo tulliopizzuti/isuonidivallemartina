@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /img
+Disallow: /css
+Disallow: /font-awesome-4.7.0
+Disallow: /js
+Disallow: /phpmailer
+Disallow: /icon.ico
+Disallow: /logo.jpg
