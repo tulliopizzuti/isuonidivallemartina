@@ -13,21 +13,21 @@ $date_check_in=$_POST['contact_check_in'];
 $room=$_POST['contact_room'];
 
 
-$mail = new PHPMailer\PHPMailer\PHPMailer(true); 
+	$mail = new PHPMailer\PHPMailer\PHPMailer(true); 
 //Server settings
     $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->Host = 'smtps.aruba.it';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'tullio.pizz@gmail.com';                 // SMTP username
-    $mail->Password = 'AmoreBarbara';                           // SMTP password
-    //$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 25;                                    // TCP port to connect to
+    $mail->Username = 'prenotazioni@isuonidivallemartina.it';                 // SMTP username
+    $mail->Password = 'Progetto1';                           // SMTP password
+    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 465;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('tullio.pizz@gmail.com', 'I suoni di valle Martina');
+    $mail->setFrom('prenotazioni@isuonidivallemartina.it', 'I suoni di valle Martina');
     $mail->addAddress('isuonidivallemartina@gmail.com', 'I suoni di valle Martina');     // Add a recipient
-	$mail->AddCC("tullio.pizz@gmail.com");
+	$mail->AddCC("giusyagresta@alice.it");
 
 
  
@@ -37,13 +37,35 @@ $mail = new PHPMailer\PHPMailer\PHPMailer(true);
     $mail->Body    = 
 		'<p>Email: '.$email.'</p>'.
 		'<p>Numero:  '.$number.'</p>'.
-		'<p>Nome,Cognome:  '.$name.'</p>'.
+		'<p>Nome, Cognome:  '.$name.'</p>'.
 		'<p>Data check in: '.$date_check_in.'</p>'.
 		'<p>Data check out: '.$date_check_out.'</p>'.
 		'<p>Stanza: '.$room.'</p>'.
 		'<p>Messaggio:  '.$message.'</p>';
 	
     $mail->send();
+$mail_2=new PHPMailer\PHPMailer\PHPMailer(true); 
+//Server settings
+    $mail_2->SMTPDebug = 0;                                 // Enable verbose debug output
+    $mail_2->isSMTP();                                      // Set mailer to use SMTP
+    $mail_2->Host = 'smtps.aruba.it';  // Specify main and backup SMTP servers
+    $mail_2->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail_2->Username = 'prenotazioni@isuonidivallemartina.it';                 // SMTP username
+    $mail_2->Password = 'Progetto1';                           // SMTP password
+    $mail_2->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+    $mail_2->Port = 465;                                    // TCP port to connect to
+
+    //Recipients
+    $mail_2->setFrom('prenotazioni@isuonidivallemartina.it', 'I suoni di valle Martina');
+	$mail_2->addAddress($email);     // Add a recipient
+	
+    //Content
+    $mail_2->isHTML(true);                                  // Set email format to HTML
+    $mail_2->Subject = "prenotazione ".$email;
+    $mail_2->Body    = 
+		'<p>Sarai contattato a breve per la conferma della prenotazione. Ti ringraziamo per averci scelto per la tua vacanza.</p>';
+	
+    $mail_2->send();		
     echo 'true';
 try {
     

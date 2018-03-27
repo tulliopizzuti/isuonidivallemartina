@@ -74,7 +74,11 @@
                 <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email"  required/>
               </div>
               <div class="form-group">
-                <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="Messagio" required></textarea>
+                <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="Messagio (opzionale)"></textarea>
+              </div>
+				<div class="form-group">
+                <input type="checkbox" id="privacy_cb" name="privacy_cb"  required>
+				Confermo di aver letto l'informativa sulla <a href="privacy.html" target="_blank"> privacy </a>e acconsento al trattamento dei dati personali.</input>
               </div>
               <div class="alert-danger" id="error_container_form" style="display: none">
                 <p class="text-danger" id="error_text_form" style="margin-bottom: 10px"></p>
@@ -91,7 +95,7 @@
               Via Iscutieri, 84060, Poderia, SA, Italia<br>
               <br>
               Email: <a class="tm-blue-text" href="mailto:isuonidivallemartina@gmail.com">isuonidivallemartina@gmail.com</a><br>
-              Tel: <a class="tm-black-text" href="tel:+393743467148">+39 3743467148</a><br>
+              Tel: <a class="tm-black-text" href="tel:+393743467148">+39 3743647148</a><br>
               </address>
 				<div id="google-map"></div>
             </div>
@@ -144,8 +148,8 @@ $( function() {
     var dateFormat_ = "dd-mm-yy",
       from = $( "#contact_check_in" )
         .datepicker({
-         defaultDate: "+1d",
-			 minDate: +1,
+         defaultDate: "+0d",
+			 minDate: +0,
           changeMonth: true,
           numberOfMonths: 1,
 			dateFormat:dateFormat_
@@ -154,9 +158,9 @@ $( function() {
           to.datepicker( "option", "minDate", getDate( this ) );
         }),
       to = $( "#contact_check_out" ).datepicker({
-        defaultDate: "+1d",
+        defaultDate: "+0d",
         changeMonth: true,
-		  minDate: +1,
+		  minDate: +0,
         numberOfMonths: 1,
 		  dateFormat:dateFormat_
       })

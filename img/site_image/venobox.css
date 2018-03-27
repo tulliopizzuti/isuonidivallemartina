@@ -203,7 +203,6 @@ img.figlio{
 -moz-user-select: none;
 -o-user-select: none;
 user-select: none;
-        max-height: 860px;
 }
 .vbox-content.swipe-left{
     margin-left: -200px !important;
