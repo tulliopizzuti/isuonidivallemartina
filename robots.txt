@@ -7,3 +7,4 @@ Disallow: /phpmailer
 Disallow: /icon.ico
 Disallow: /logo.jpg
 Disallow: /privacy.html
+sitemap: http://www.isuonidivallemartina.it/sitemap.xml
